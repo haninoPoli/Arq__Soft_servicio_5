@@ -5,6 +5,7 @@ import os
 
 app = Flask(__name__)
 app.debug = False
+app.config['DEBUG'] = False
 # Define la URL de conexión de MongoDB
 mongo_uri = "mongodb://mongo:axfxPntCXsxWNISqLqdJtEqEUYzywocq@viaduct.proxy.rlwy.net:28606"
 
