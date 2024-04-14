@@ -1,9 +1,14 @@
 from flask import Flask, request, jsonify, render_template
 from pymongo import MongoClient
 from datetime import datetime
+import os
 
 app = Flask(__name__)
-client = MongoClient('mongodb://mongo:AArzAGxXhwaDJJzndLQdivdrFuAPkiaP@monorail.proxy.rlwy.net:16509')
+# Define la URL de conexión de MongoDB
+mongo_uri = "mongodb://mongo:axfxPntCXsxWNISqLqdJtEqEUYzywocq@viaduct.proxy.rlwy.net:28606"
+
+# Conéctate a la base de datos
+client = MongoClient(mongo_uri)
 db = client['tu_basededatos']
 reservaciones_collection = db['reservaciones']
 
