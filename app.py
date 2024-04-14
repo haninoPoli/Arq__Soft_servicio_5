@@ -3,7 +3,7 @@ from pymongo import MongoClient
 from datetime import datetime
 
 app = Flask(__name__)
-client = MongoClient('mongodb://localhost:27017/')
+client = MongoClient('mongodb://mongo:AArzAGxXhwaDJJzndLQdivdrFuAPkiaP@monorail.proxy.rlwy.net:16509')
 db = client['tu_basededatos']
 reservaciones_collection = db['reservaciones']
 
