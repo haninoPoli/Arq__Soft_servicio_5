@@ -66,6 +66,5 @@ if __name__ == '__main__':
     # Obtén el valor del puerto de la variable de entorno PORT
     port = int(os.environ.get("PORT", 5000))  # Si PORT no está definido, usa el puerto 5000 por defecto
     
-    # Inicia el servidor de Flask escuchando en 0.0.0.0 y en el puerto obtenido de PORT
-    app.run(host='0.0.0.0', port=port)
-    app.run(debug=False)
+    # Inicia el servidor de Flask escuchando solo en el puerto obtenido de PORT
+    app.run(host='0.0.0.0', port=port, debug=False)
